@@ -1,0 +1,90 @@
+<nav class="nanavbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h2>Restaurant Record App</h2>
+    <div class="d-flex">
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Restaurent</button>
+    </div>
+  </div>
+</nav>
+<!--Jumbotron-->
+<div class="p-5 mb-4 light rounded-3">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Restaurant Record Management</h1>
+        <p class="col-md-8 fs-4">Save Records</p>
+        
+    </div>
+</div>
+<table class="table mt-4">
+    <thead>
+        <tr>
+            <th scope="col">Restaurent ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile</th>
+            <th scope="col">Address</th>
+            <th scope="col">Service</th>
+            <th scope="col">Action</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Sanjana</td>
+            <td>sanju@gmail.com</td>
+            <td>6789678987</td>
+            <td>Telangana</td>
+            <td>Chai & Coffee</td>
+            <td>
+                <button><div class="btn btn-info">Edit</div></button>&nbsp;
+                <button><div class="btn btn-danger">Delete</div></button>
+
+            </td>
+
+
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal" tabindex="-1" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="mb-3">
+                  <label class="form-label">Name</label>
+                  <input type="text" formControlName="name" class="form-control" placeholder="Restaurant Name here" id="exampleInputEmail1" aria-describedby="emailHelp">
+               
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email Id</label>
+                  <input type="email" formControlName="email" class="form-control" placeholder="Restaurant email" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Mobile</label>
+                    <input type="text" formControlName="mobile" class="form-control" placeholder="Restaurant Mobile" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Address</label>
+                    <input type="text" formControlName="add" class="form-control" placeholder="Restaurant Address" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Services</label>
+                    <input type="text" formControlName="services" class="form-control" placeholder="Restaurant Services" id="exampleInputPassword1">
+                </div>
+
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Add Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
